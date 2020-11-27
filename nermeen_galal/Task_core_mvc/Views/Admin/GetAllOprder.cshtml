@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Task_core_mvc.ViewModel.OrderVM>
+
+@{
+    ViewData["Title"] = "GetAllOprder";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>GetAllOprder</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Product")
+            </th>
+            <th>
+                @Html.DisplayName("Date")
+            </th>
+            <th>
+                @Html.DisplayName("Count")
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.prodectname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Count)
+            </td>
+           
+            <td>
+                <a href="~/Admin/EditOrder/@item.ID" >Edit</a> |
+                <a href="~/Admin/DetailsOrder/@item.ID">Details</a> |
+                <a href="~/Admin/DeleteOrder/@item.ID" >Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

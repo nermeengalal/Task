@@ -1,0 +1,48 @@
+﻿@model Task_core_mvc.Models.Order
+
+@{
+    ViewData["Title"] = "EditOrder";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>EditOrder</h1>
+
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditOrder" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="ProductID" class="control-label">Product Name</label>
+
+                <select name="ProductID" class="form-control" asp-items="@(new SelectList(ViewBag.Product,"ID","Name"))" ></select>
+
+                <span asp-validation-for="ProductID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input name="Date" class="form-control" value="@Model.Date"/>
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Count" class="control-label"></label>
+                <input name="Count" class="form-control" value="@Model.Count"/>
+                <span asp-validation-for="Count" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
