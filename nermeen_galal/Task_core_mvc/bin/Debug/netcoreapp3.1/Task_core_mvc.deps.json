@@ -32,8 +32,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
           "Microsoft.jQuery.Unobtrusive.Validation": "3.2.3",
           "Pomelo.EntityFrameworkCore.MySql": "3.2.4",
-          "jQuery": "3.5.1",
-          "jQuery.Validation": "1.19.2",
+          "System.Linq.Dynamic.Core": "1.2.7",
+          "jQuery": "3.3.1",
+          "jQuery.UI.Combined": "1.12.1",
+          "jQuery.Validation": "1.16.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -305,10 +307,15 @@
           "Task_core_mvc.dll": {}
         }
       },
-      "jQuery/3.5.1": {},
-      "jQuery.Validation/1.19.2": {
+      "jQuery/3.3.1": {},
+      "jQuery.UI.Combined/1.12.1": {
         "dependencies": {
-          "jQuery": "3.5.1"
+          "jQuery": "3.3.1"
+        }
+      },
+      "jQuery.Validation/1.16.0": {
+        "dependencies": {
+          "jQuery": "3.3.1"
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.8": {
@@ -1112,8 +1119,8 @@
       },
       "Microsoft.jQuery.Unobtrusive.Validation/3.2.3": {
         "dependencies": {
-          "jQuery": "3.5.1",
-          "jQuery.Validation": "1.19.2"
+          "jQuery": "3.3.1",
+          "jQuery.Validation": "1.16.0"
         }
       },
       "Microsoft.NETCore.Platforms/2.1.2": {},
@@ -1835,6 +1842,17 @@
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0"
+        }
+      },
+      "System.Linq.Dynamic.Core/1.2.7": {
+        "runtime": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.2.7.0",
+            "fileVersion": "1.2.7.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {}
         }
       },
       "System.Linq.Expressions/4.3.0": {
@@ -3982,19 +4000,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "jQuery/3.5.1": {
+    "jQuery/3.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ji6sm/AI0vjASXAA/AG9Yf5ypALAqIDXFFKPHMAnFL8kp3xqULIWhACjg/OXZP88C56frYlIej2nrdBnhTMYQQ==",
-      "path": "jquery/3.5.1",
-      "hashPath": "jquery.3.5.1.nupkg.sha512"
+      "sha512": "sha512-tYajvLpBj04iqObTE+KDX172vu9Ifgja17CSezuBAI0nJt5CgsTcQqMX356F8S6z98VZ2k5EAesPNMvwshPhZQ==",
+      "path": "jquery/3.3.1",
+      "hashPath": "jquery.3.3.1.nupkg.sha512"
     },
-    "jQuery.Validation/1.19.2": {
+    "jQuery.UI.Combined/1.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2/Cz+HM456ioL8UTu57ETIs4bmHZN4WBwl7ygQfFokbF/tm4cCMLQEg3KJ28riyOvrJqvnL5dpaCxmFIeee3CA==",
-      "path": "jquery.validation/1.19.2",
-      "hashPath": "jquery.validation.1.19.2.nupkg.sha512"
+      "sha512": "sha512-5B0LrPZ0TLlwplPRu43h7fgMtDxMMEF31HajUqHSOJ7bC6nyJUJy7AkcuGaJdBrrZAZutnSBgXT01BGiIIC4TQ==",
+      "path": "jquery.ui.combined/1.12.1",
+      "hashPath": "jquery.ui.combined.1.12.1.nupkg.sha512"
+    },
+    "jQuery.Validation/1.16.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5vvz+cw3ykW15RmXoc6GzSKndb1Se38u4cJ3cqEvZxmInf/9NwvOxu2EUYdK2mCsdDsvGn2m9HA7s9NOrr8Wdw==",
+      "path": "jquery.validation/1.16.0",
+      "hashPath": "jquery.validation.1.16.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.8": {
       "type": "package",
@@ -4828,6 +4853,13 @@
       "sha512": "sha512-5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "path": "system.linq/4.3.0",
       "hashPath": "system.linq.4.3.0.nupkg.sha512"
+    },
+    "System.Linq.Dynamic.Core/1.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5m38/z1CrZ6Ul+1fSLh0J1ij0MNmllppxHPF9IaBzoeTARQDtS7zM0mGMrYFCwpE2Ditx17gBPCv5YC95OhTSA==",
+      "path": "system.linq.dynamic.core/1.2.7",
+      "hashPath": "system.linq.dynamic.core.1.2.7.nupkg.sha512"
     },
     "System.Linq.Expressions/4.3.0": {
       "type": "package",

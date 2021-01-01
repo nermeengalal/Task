@@ -14,7 +14,7 @@ using Task_core_mvc.ViewModel;
 
 namespace Task_core_mvc.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -31,14 +31,33 @@ namespace Task_core_mvc.Controllers
         }
         public IActionResult Index()
         {
-            var allProduct = _ProductService.GetAll();
-            return View(allProduct);
+            //var allProduct = _ProductService.GetAll();
+            return View();
         }
 
-        [HttpGet]
-        public IActionResult add()
+        [HttpPost]
+        public IActionResult GetallProduct()
         {
-            return View();
+            var draw = Request.Form["draw"].FirstOrDefault();
+            var start = Request.Form["start"].FirstOrDefault();
+            var length = Request.Form["length"].FirstOrDefault();
+            var sortColumn = Request.Form["columns[" + Request.Form["order[0][column]"].FirstOrDefault() + "][name]"].FirstOrDefault();
+            var sortColumnDirection = Request.Form["order[0][dir]"].FirstOrDefault();
+            var searchValue = Request.Form["search[value]"].FirstOrDefault();
+            int pageSize = length != null ? Convert.ToInt32(length) : 0;
+            int skip = start != null ? Convert.ToInt32(start) : 0;
+            int recordsTotal = 0;
+            var productData = _ProductService.GetAll().OrderBy(a => a.Name);
+
+            recordsTotal = productData.Count();
+            var data = productData.Skip(skip).Take(pageSize).ToList();
+           // var jsonData = new { draw = draw, recordsFiltered = recordsTotal, recordsTotal = recordsTotal, data = data };
+            return Json(new { draw = draw, recordsFiltered = recordsTotal, recordsTotal = recordsTotal, data = data });
+        }
+        [HttpGet]
+        public PartialViewResult add()
+        {
+            return PartialView("Add");
         }
 
         [HttpPost]

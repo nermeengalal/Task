@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\nermeen_galal\\Task_core_mvc\\Task_core_mvc.csproj": {}
+    "D:\\asd\\nermeen_galal\\Task_core_mvc\\Task_core_mvc.csproj": {}
   },
   "projects": {
-    "D:\\nermeen_galal\\Task_core_mvc\\Task_core_mvc.csproj": {
+    "D:\\asd\\nermeen_galal\\Task_core_mvc\\Task_core_mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\nermeen_galal\\Task_core_mvc\\Task_core_mvc.csproj",
+        "projectUniqueName": "D:\\asd\\nermeen_galal\\Task_core_mvc\\Task_core_mvc.csproj",
         "projectName": "Task_core_mvc",
-        "projectPath": "D:\\nermeen_galal\\Task_core_mvc\\Task_core_mvc.csproj",
+        "projectPath": "D:\\asd\\nermeen_galal\\Task_core_mvc\\Task_core_mvc.csproj",
         "packagesPath": "C:\\Users\\TheGenius\\.nuget\\packages\\",
-        "outputPath": "D:\\nermeen_galal\\Task_core_mvc\\obj\\",
+        "outputPath": "D:\\asd\\nermeen_galal\\Task_core_mvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -77,13 +77,21 @@
               "target": "Package",
               "version": "[3.2.4, )"
             },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.7, )"
+            },
             "jQuery": {
               "target": "Package",
-              "version": "[3.5.1, )"
+              "version": "[3.3.1, )"
+            },
+            "jQuery.UI.Combined": {
+              "target": "Package",
+              "version": "[1.12.1, )"
             },
             "jQuery.Validation": {
               "target": "Package",
-              "version": "[1.19.2, )"
+              "version": "[1.16.0, )"
             }
           },
           "imports": [
@@ -104,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
